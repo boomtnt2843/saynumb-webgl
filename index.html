@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaynumB · WebGL</title>
+  <link rel="icon" href="assets/saynumb-reference.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+
+    <div id="hint" class="hint">drag me around ✦</div>
+    <div id="bubble" class="bubble">Hi~ !</div>
+
+    <header class="topbar">
+      <img class="logo" src="assets/saynumb-reference.png" alt="SaynumB" />
+      <h1>SaynumB</h1>
+    </header>
+
+    <button id="panelToggle" class="panel-toggle" aria-label="Toggle controls">☰</button>
+
+    <aside id="panel" class="panel">
+      <section>
+        <h2>Say something</h2>
+        <button id="sayHiBtn" class="btn btn-primary">👋 Say Hi</button>
+      </section>
+
+      <section>
+        <h2>Emotion</h2>
+        <div class="chip-row" id="emotionRow">
+          <button class="chip is-active" data-emotion="happy">😊 Happy</button>
+          <button class="chip" data-emotion="surprised">😲 Surprised</button>
+          <button class="chip" data-emotion="wink">😉 Wink</button>
+          <button class="chip" data-emotion="sad">🥺 Sad</button>
+          <button class="chip" data-emotion="love">😍 Love</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Background color</h2>
+        <div class="swatch-row" id="colorRow">
+          <button class="swatch" style="--sw:#ffffff" data-color="#ffffff" title="White"></button>
+          <button class="swatch" style="--sw:#ffe3ec" data-color="#ffe3ec" title="Blush"></button>
+          <button class="swatch" style="--sw:#e3f6ff" data-color="#e3f6ff" title="Sky"></button>
+          <button class="swatch" style="--sw:#e9e3ff" data-color="#e9e3ff" title="Lavender"></button>
+          <button class="swatch" style="--sw:#e3ffe9" data-color="#e3ffe9" title="Mint"></button>
+          <input type="color" id="colorPicker" value="#ffffff" title="Custom color" />
+        </div>
+      </section>
+
+      <section>
+        <h2>Scene</h2>
+        <div class="chip-row" id="presetRow">
+          <button class="chip is-active" data-preset="plain">◻ Plain</button>
+          <button class="chip" data-preset="space">🌌 Space</button>
+          <button class="chip" data-preset="stars">✨ Star Landscape</button>
+          <button class="chip" data-preset="glass">☁️ Glass &amp; Cloud</button>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./node_modules/three/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
